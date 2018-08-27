@@ -1,0 +1,47 @@
+#include <iostream>
+#include <conio.h>
+#include <cstring>
+
+using namespace std; 
+
+int main()
+{
+	int lifes=0;
+	int none;
+	char letter;
+	char word2guess[25]={0};
+	char guessedword[25]={0};
+	int w ;
+	int o; 
+	
+	cout << "type your word to play hangman: " << endl; 
+	cin >> word2guess;
+	
+	while (lifes<=5 && strcmp (guessedword,word2guess)!=0)
+	{
+		none = 0; 
+		cout <<endl << "guess a letter: "; 
+		cin >> letter; 
+		
+		for(int n=o; n<25; n++){
+			if(word2guess[ w ]==letter){
+				guessedword[ w ]= word2guess[ w ];
+				none=1;
+			}
+		}
+		
+	if(none<1){
+		lifes = lifes+1;
+		cout <<"try one more time: " << endl;
+	}
+	}
+	if(lifes>5){
+		cout <<endl<<"you lose"; 
+	}
+	else {
+		cout << endl << "you win";
+	}
+  
+	getch();
+	return 0; 
+	}
